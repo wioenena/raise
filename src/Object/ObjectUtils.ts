@@ -15,13 +15,19 @@ export class ObjectUtils {
      * @memberof ObjectUtil
      */
     public static objectDifferenceKeys(base: object, target: object): string[] {
-        const targetKeys: string[] = [
-            ...Object.getOwnPropertyNames(target),
-            ...Object.getOwnPropertyNames(Object.getPrototypeOf(target))
-        ];
-        return [
-            ...Object.getOwnPropertyNames(base),
-            ...Object.getOwnPropertyNames(Object.getPrototypeOf(base))
-        ].filter((k) => !targetKeys.includes(k));
+        const targetKeys: string[] = this.objectDeepKeys(target);
+        return this.objectDeepKeys(base).filter((k) => !targetKeys.includes(k));
+    }
+
+    public static objectDeepKeys(o: object): string[] {
+        const result: string[] = [];
+
+        result.push(...Object.getOwnPropertyNames(o));
+
+        if ("constructor" in o) {
+            result.push(...Object.getOwnPropertyNames(Object.getPrototypeOf(o)));
+        }
+
+        return result;
     }
 }
