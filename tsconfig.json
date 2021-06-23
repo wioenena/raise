@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "noUnusedParameters": true,
+        "importsNotUsedAsValues": "error",
+        "experimentalDecorators": true
+    },
+    "include": [
+        "src/**/*",
+        "tests/**/*"
+    ]
+}
