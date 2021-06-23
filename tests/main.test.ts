@@ -100,4 +100,13 @@ Deno.test("isPromise with Promise structure", () => {
     );
 });
 
-console.log(Raise.objectDifferenceKeys({ a: 3 }, { b: 4 }));
+Deno.test("objectDifferenceKeys", () => {
+    const base = { a: true, b: true };
+    const target = { a: true, c: true };
+    assert(
+        equal(
+            Raise.objectDifferenceKeys(base, target),
+            ["b"]
+        )
+    );
+});
