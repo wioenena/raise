@@ -102,6 +102,7 @@
         "no-undef": "off",
         "no-dupe-class-members": "off",
         "max-classes-per-file": "off",
-        "new-cap": "off"
+        "new-cap": "off",
+        "func-names": "off"
     }
 }
