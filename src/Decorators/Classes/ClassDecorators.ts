@@ -28,6 +28,7 @@ export function classPropLength(min?: number | null, max?: number | null) {
 export function classMethodNameLength(min?: number | null, max?: number | null) {
     return function (target: Object, _: string | symbol, descriptor: PropertyDescriptor) {
         const method = descriptor.value as Function;
+
         if (!StringUtils.strLengthRange(method.name, min, max)) {
             throw new RangeError(`Class method name is not within the specified ranges. (class name = ${target.constructor.name}, method name = ${method.name}, length = ${method.name.length}, min = ${min ?? -1}, max = ${max ?? Infinity})`);
         }
