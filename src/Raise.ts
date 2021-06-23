@@ -66,7 +66,13 @@ export class Raise {
      * @memberof Raise
      */
     public static objectDifferenceKeys(base: object, target: object): string[] {
-        const keys = Object.keys(target);
-        return Object.keys(base).filter((k) => !keys.includes(k));
+        const targetKeys: string[] = [
+            ...Object.getOwnPropertyNames(target),
+            ...Object.getOwnPropertyNames(Object.getPrototypeOf(target))
+        ];
+        return [
+            ...Object.getOwnPropertyNames(base),
+            ...Object.getOwnPropertyNames(Object.getPrototypeOf(base))
+        ].filter((k) => !targetKeys.includes(k));
     }
 }

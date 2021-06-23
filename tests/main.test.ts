@@ -110,3 +110,26 @@ Deno.test("objectDifferenceKeys", () => {
         )
     );
 });
+
+Deno.test("objectDifferenceKeys with classes", () => {
+    class classBase {
+        public a = true;
+        public b = true;
+        public hello() { }
+        public get getA() { return this.a; }
+        public set setA(_: boolean) { this.a = _; }
+    }
+    class classTarget {
+        public a = true;
+        public c = true;
+    }
+
+    const base = new classBase();
+    const target = new classTarget();
+    assert(
+        equal(
+            Raise.objectDifferenceKeys(base, target),
+            ["b", "hello", "getA", "setA"]
+        )
+    );
+});
