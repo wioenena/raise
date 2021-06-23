@@ -1,5 +1,6 @@
 import { equal, assert } from "https://deno.land/std@0.99.0/testing/asserts.ts";
 import { ArrayUtils, ObjectUtils, FunctionUtils } from "../mod.ts";
+import { classMethodNameLength, classNameLength, classPropLength } from "../decorators.ts";
 
 Deno.test("range(0,10)", () => {
     assert(
@@ -132,4 +133,15 @@ Deno.test("objectDifferenceKeys with classes", () => {
             ["b", "hello", "getA", "setA"]
         )
     );
+});
+
+Deno.test("class decorators", () => {
+    @classNameLength(null, 10)
+    class myClass {
+        @classPropLength(null, 10)
+        public myProp?: string;
+
+        @classMethodNameLength(null, 10)
+        public myMethod() { }
+    }
 });
