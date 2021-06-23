@@ -99,3 +99,5 @@ Deno.test("isPromise with Promise structure", () => {
         )
     );
 });
+
+console.log(Raise.objectDifferenceKeys({ a: 3 }, { b: 4 }));

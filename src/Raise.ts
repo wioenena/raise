@@ -24,6 +24,14 @@ export class Raise {
         return result;
     }
 
+    /**
+     *
+     * Returns whether the value is 'Promise'.
+     * @static
+     * @param {unknown} [target]
+     * @returns {boolean}
+     * @memberof Raise
+     */
     public static isPromise(target?: unknown): boolean {
         const typePromise = target as Promise<unknown>;
 
@@ -46,5 +54,19 @@ export class Raise {
         ) return true;
 
         return false;
+    }
+
+    /**
+     *
+     * Returns the keys found in the main object that are not found in the target object.
+     * @static
+     * @param {object} base
+     * @param {object} target
+     * @returns {string[]}
+     * @memberof Raise
+     */
+    public static objectDifferenceKeys(base: object, target: object): string[] {
+        const keys = Object.keys(target);
+        return Object.keys(base).filter((k) => !keys.includes(k));
     }
 }
