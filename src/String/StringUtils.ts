@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 export class StringUtils {
     public static strLengthRange(str: string, min?: number | null, max?: number | null): boolean {
+        if (typeof str !== "string") return false;
         if (min && !max) {
             return str.length >= min;
         }
@@ -24,7 +25,8 @@ export class StringUtils {
         return true;
     }
 
-    public static title(str: string): string {
+    public static title(str: string): string | null {
+        if (typeof str !== "string") return null;
         return str.split(/\s+/g).map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`).join(" ");
     }
 }

@@ -155,3 +155,12 @@ Deno.test("Title", () => {
         )
     );
 });
+
+Deno.test("Title with non string", () => {
+    assert(
+        equal(
+            StringUtils.title(StringUtils as any),
+            null
+        )
+    );
+});
