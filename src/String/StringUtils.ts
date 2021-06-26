@@ -45,8 +45,8 @@ export class StringUtils {
 
     public static isCamelCase(str: string): boolean {
         if (!this.isString(str)) return false;
-        if (str.match(/[A-Z]+/g)) return false;
-        return true;
+        if (str.match(/[A-Z]+/g) && !str.includes("_")) return true;
+        return false;
     }
 
     public static isUrl(str: string) {
@@ -67,6 +67,12 @@ export class StringUtils {
 
     public static isSnakeCase(str: string): boolean {
         if (!this.isString(str)) return false;
-        return str.includes("_") && str !== "_";
+        return str.includes("_") && str !== "_" && !(/[A-Z]+/g).test(str);
+    }
+
+    public static camelCaseToSnakeCase(str: string): string {
+        if (!this.isString(str)) return "";
+        if (!this.isCamelCase(str)) return str;
+        return str.replace(/[A-Z]+/g, (char, index) => `${index === 0 || index === str.length ? "" : "_"}${char.toLowerCase()}`);
     }
 }

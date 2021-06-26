@@ -54,11 +54,11 @@ Deno.test("isFullString", () => {
 Deno.test("isCamelCase", () => {
     assertEquals(
         StringUtils.isCamelCase("hi"),
-        true
+        false
     );
     assertEquals(
         StringUtils.isCamelCase("hI"),
-        false
+        true
     );
 });
 
@@ -115,5 +115,17 @@ Deno.test("isSnakeCase", () => {
     assertEquals(
         StringUtils.isSnakeCase("ab"),
         false
+    );
+});
+
+Deno.test("camelCaseToSnake", () => {
+    assertEquals(
+        StringUtils.camelCaseToSnakeCase("MyStr"),
+        "my_str"
+    );
+
+    assertEquals(
+        StringUtils.camelCaseToSnakeCase("MyStr_"),
+        "MyStr_"
     );
 });
