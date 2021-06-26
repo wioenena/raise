@@ -42,4 +42,10 @@ export class StringUtils {
         if (str === "" || str === " ") return false;
         return true;
     }
+
+    public static isCamelCase(str: string): boolean {
+        if (!this.isString(str)) return false;
+        if (str.match(/[A-Z]+/g)) return false;
+        return true;
+    }
 }
