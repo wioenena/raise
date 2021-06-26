@@ -49,6 +49,13 @@ export class StringUtils {
         return false;
     }
 
+    public static isLowerCase(str: string): boolean {
+        if (!this.isString(str)) return false;
+        if (this.isSnakeCase(str)) return false;
+        if (this.isCamelCase(str)) return false;
+        return !(str === "" || str === "");
+    }
+
     public static isUrl(str: string) {
         if (!this.isString(str)) return false;
         const reg = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/g;
@@ -74,5 +81,11 @@ export class StringUtils {
         if (!this.isString(str)) return "";
         if (!this.isCamelCase(str)) return str;
         return str.replace(/[A-Z]+/g, (char, index) => `${index === 0 || index === str.length ? "" : "_"}${char.toLowerCase()}`);
+    }
+
+    public static snakeCaseToCamelCase(str: string): string {
+        if (!this.isString(str)) return "";
+        if (!this.isSnakeCase(str)) return str;
+        return str.split(/_/g).map((words) => `${words.charAt(0).toUpperCase()}${words.slice(1)}`).join("");
     }
 }
