@@ -61,3 +61,20 @@ Deno.test("isCamelCase", () => {
         false
     );
 });
+
+Deno.test("isUrl", () => {
+    assertEquals(
+        StringUtils.isUrl("https://www.google/com"),
+        true
+    );
+
+    assertEquals(
+        StringUtils.isUrl("http://www.google.com"),
+        true
+    );
+
+    assertEquals(
+        StringUtils.isUrl(".mysite.com"),
+        false
+    );
+});

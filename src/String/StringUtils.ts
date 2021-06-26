@@ -48,4 +48,12 @@ export class StringUtils {
         if (str.match(/[A-Z]+/g)) return false;
         return true;
     }
+
+    public static isUrl(str: string) {
+        if (!this.isString(str)) return false;
+        const reg = /(https?)(:\/\/)(www.)?(.+)/g;
+        const matched = str.match(reg);
+        if (matched !== null && matched instanceof Array && Array.isArray(matched)) return true;
+        return false;
+    }
 }
