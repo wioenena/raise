@@ -134,4 +134,37 @@ export class StringUtils {
         }
         return str.replace(/\s/g, "-");
     }
+
+    public static first(str: string): string {
+        if (!this.isString(str)) {
+            throw new RaiseTypeError("string", str);
+        }
+
+        return str.charAt(0);
+    }
+
+    public static last(str: string): string {
+        if (!this.isString(str)) {
+            throw new RaiseTypeError("string", str);
+        }
+        return str.charAt(str.length - 1);
+    }
+
+    public static insert(str: string, toInsert: string, position: number) {
+        if (!this.isString(str)) {
+            throw new RaiseTypeError("string", str);
+        }
+
+        const { length } = str;
+        if (position < 0 || position > length) {
+            throw new RangeError(`The position is not between content lengths. min = 0, max = ${length}`);
+        }
+        let result = "";
+
+        for (let i = 0; i < length; i++) {
+            result += i === position ? `${toInsert}${str[i]}` : str[i];
+        }
+
+        return result;
+    }
 }

@@ -162,4 +162,25 @@ Deno.test("slugify", () => {
     );
 });
 
+Deno.test("first", () => {
+    assertEquals(
+        StringUtils.first("abcd"),
+        "a"
+    );
+});
+
+Deno.test("last", () => {
+    assertEquals(
+        StringUtils.last("abcd"),
+        "d"
+    );
+});
+
+Deno.test("insert", () => {
+    assertEquals(
+        StringUtils.insert("abde", "c", 2),
+        "abcde"
+    );
+});
+
 console.log(StringUtils.shuffle("abcdc"));
