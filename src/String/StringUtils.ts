@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 export class StringUtils {
     public static strLengthRange(str: string, min?: number | null, max?: number | null): boolean {
-        if (this.isString(str)) return false;
+        if (!this.isString(str)) return false;
         if (min && !max) {
             return str.length >= min;
         }

@@ -154,13 +154,35 @@ Deno.test("Title", () => {
             "Hello World!"
         )
     );
-});
 
-Deno.test("Title with non string", () => {
     assert(
         equal(
             StringUtils.title(StringUtils as any),
             null
+        )
+    );
+});
+
+Deno.test("isString", () => {
+    assert(
+        equal(
+            StringUtils.isString("Hi"),
+            true
+        )
+    );
+
+    assert(
+        equal(
+            StringUtils.isString(3),
+            false
+        )
+    );
+
+    assert(
+        equal(
+            // eslint-disable-next-line no-new-wrappers
+            StringUtils.isString(new String("hi")),
+            true
         )
     );
 });
