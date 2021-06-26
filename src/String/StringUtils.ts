@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import { RaiseTypeError } from "../Errors/TypeError.ts";
+import { Mixed } from "../../deps.ts";
 
 export class StringUtils {
     public static strLengthRange(str: string, min?: number | null, max?: number | null): boolean {
@@ -116,5 +117,14 @@ export class StringUtils {
             result += str[i];
         }
         return result;
+    }
+
+    public static shuffle(str: string): string {
+        if (!this.isString(str)) {
+            throw new RaiseTypeError("string", str);
+        }
+        const chars = str.split("");
+        Mixed.shuffle(chars);
+        return chars.join("");
     }
 }

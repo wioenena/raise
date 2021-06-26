@@ -154,3 +154,5 @@ Deno.test("reverse", () => {
         "dcba"
     );
 });
+
+console.log(StringUtils.shuffle("abcdc"));
