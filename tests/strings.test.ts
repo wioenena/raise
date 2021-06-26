@@ -40,3 +40,32 @@ Deno.test("isString", () => {
         )
     );
 });
+
+Deno.test("isFullString", () => {
+    assert(
+        equal(
+            StringUtils.isFullString(null as any),
+            false
+        )
+    );
+
+    assert(
+        equal(
+            StringUtils.isFullString(""),
+            false
+        )
+    );
+    assert(
+        equal(
+            StringUtils.isFullString(" "),
+            false
+        )
+    );
+
+    assert(
+        equal(
+            StringUtils.isFullString("Hello"),
+            true
+        )
+    );
+});
