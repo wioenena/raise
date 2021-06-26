@@ -91,20 +91,20 @@ export class StringUtils {
         return str.includes("_") && str !== "_" && !(/[A-Z]+/g).test(str);
     }
 
-    public static camelCaseToSnakeCase(str: string): string {
+    public static snakeCase(str: string, reg: RegExp = /[A-Z]+/g): string {
         if (!this.isString(str)) {
             throw new RaiseTypeError("string", str);
         }
-        if (!this.isCamelCase(str)) return str;
-        return str.replace(/[A-Z]+/g, (char, index) => `${index === 0 || index === str.length ? "" : "_"}${char.toLowerCase()}`);
+        const { length } = str;
+        return str.replace(reg, (char, i) => `${i === 0 || i === length ? "" : "_"}${char.toLowerCase()}`);
     }
 
-    public static snakeCaseToCamelCase(str: string): string {
+    public static camelCase(str: string, reg: RegExp = /_/g): string {
         if (!this.isString(str)) {
             throw new RaiseTypeError("string", str);
         }
-        if ((/[A-Z]+/g).test(str) && !str.includes("_")) return str;
-        return str.split(/_/g).map((words, i) => `${i === 0 ? words.charAt(0).toLowerCase() : words.charAt(0).toUpperCase()}${words.slice(1)}`).join("");
+
+        return str.split(reg).map((word, i) => `${i === 0 ? word[0].toLowerCase() : word[0].toUpperCase()}${word.slice(1)}`).join("");
     }
 
     public static reverse(str: string): string {
