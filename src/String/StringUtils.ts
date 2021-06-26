@@ -64,4 +64,9 @@ export class StringUtils {
         if (matched !== null && matched instanceof Array && Array.isArray(matched)) return true;
         return false;
     }
+
+    public static isSnakeCase(str: string): boolean {
+        if (!this.isString(str)) return false;
+        return str.includes("_") && str !== "_";
+    }
 }

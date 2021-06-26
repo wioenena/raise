@@ -95,3 +95,25 @@ Deno.test("isEmail", () => {
         false
     );
 });
+
+Deno.test("isSnakeCase", () => {
+    assertEquals(
+        StringUtils.isSnakeCase("ab_cd"),
+        true
+    );
+
+    assertEquals(
+        StringUtils.isSnakeCase("ab_"),
+        true
+    );
+
+    assertEquals(
+        StringUtils.isSnakeCase("_"),
+        false
+    );
+
+    assertEquals(
+        StringUtils.isSnakeCase("ab"),
+        false
+    );
+});
