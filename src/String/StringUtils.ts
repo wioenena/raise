@@ -55,7 +55,7 @@ export class StringUtils {
         if (!this.isString(str)) {
             throw new RaiseTypeError("string", str);
         }
-        if (str.match(/[A-Z]+/g) && !str.includes("_")) return true;
+        if (str.match(/[A-Z]+/g) && !str.includes("_") && str[0] !== str[0].toUpperCase()) return true;
         return false;
     }
 
@@ -104,7 +104,7 @@ export class StringUtils {
             throw new RaiseTypeError("string", str);
         }
         if ((/[A-Z]+/g).test(str) && !str.includes("_")) return str;
-        return str.split(/_/g).map((words) => `${words.charAt(0).toUpperCase()}${words.slice(1)}`).join("");
+        return str.split(/_/g).map((words, i) => `${i === 0 ? words.charAt(0).toLowerCase() : words.charAt(0).toUpperCase()}${words.slice(1)}`).join("");
     }
 
     public static reverse(str: string): string {
@@ -126,5 +126,12 @@ export class StringUtils {
         const chars = str.split("");
         Mixed.shuffle(chars);
         return chars.join("");
+    }
+
+    public static slugify(str: string): string {
+        if (!this.isString(str)) {
+            throw new RaiseTypeError("string", str);
+        }
+        return str.replace(/\s/g, "-");
     }
 }

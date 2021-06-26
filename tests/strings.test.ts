@@ -126,7 +126,7 @@ Deno.test("isLowerCase", () => {
 
 Deno.test("camelCaseToSnake", () => {
     assertEquals(
-        StringUtils.camelCaseToSnakeCase("MyStr"),
+        StringUtils.camelCaseToSnakeCase("myStr"),
         "my_str"
     );
 
@@ -139,12 +139,12 @@ Deno.test("camelCaseToSnake", () => {
 Deno.test("snakeCaseToCamel", () => {
     assertEquals(
         StringUtils.snakeCaseToCamelCase("ab_cd"),
-        "AbCd"
+        "abCd"
     );
 
     assertEquals(
         StringUtils.snakeCaseToCamelCase("Ab_cd"),
-        "AbCd"
+        "abCd"
     );
 });
 
@@ -152,6 +152,13 @@ Deno.test("reverse", () => {
     assertEquals(
         StringUtils.reverse("abcd"),
         "dcba"
+    );
+});
+
+Deno.test("slugify", () => {
+    assertEquals(
+        StringUtils.slugify("a b c d e"),
+        "a-b-c-d-e"
     );
 });
 
