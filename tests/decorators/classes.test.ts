@@ -1,4 +1,4 @@
-import { classMethodNameLength, classNameLength, classPropLength } from "../decorators.ts";
+import { classMethodNameLength, classNameLength, classPropLength } from "../../decorators.ts";
 
 Deno.test("class decorators", () => {
     @classNameLength(null, 10)
