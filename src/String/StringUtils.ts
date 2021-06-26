@@ -56,4 +56,12 @@ export class StringUtils {
         if (matched !== null && matched instanceof Array && Array.isArray(matched)) return true;
         return false;
     }
+
+    public static isEmail(str: string): boolean {
+        if (!this.isString(str)) return false;
+        const reg = /\S+@\S+\.\S+/g;
+        const matched = str.match(reg);
+        if (matched !== null && matched instanceof Array && Array.isArray(matched)) return true;
+        return false;
+    }
 }

@@ -78,3 +78,20 @@ Deno.test("isUrl", () => {
         false
     );
 });
+
+Deno.test("isEmail", () => {
+    assertEquals(
+        StringUtils.isEmail("raise@raise.raise"),
+        true
+    );
+
+    assertEquals(
+        StringUtils.isEmail("raise@raise"),
+        false
+    );
+
+    assertEquals(
+        StringUtils.isEmail("raise.raise"),
+        false
+    );
+});
