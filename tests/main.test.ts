@@ -1,5 +1,5 @@
 import { equal, assert } from "https://deno.land/std@0.99.0/testing/asserts.ts";
-import { ArrayUtils, ObjectUtils, FunctionUtils } from "../mod.ts";
+import { ArrayUtils, ObjectUtils, FunctionUtils, PromiseUtils } from "../mod.ts";
 import { classMethodNameLength, classNameLength, classPropLength } from "../decorators.ts";
 
 Deno.test("range(0,10)", () => {
@@ -33,27 +33,27 @@ Deno.test("isPromise with arrow function", () => {
     const nonAsyncFn = () => { };
     assert(
         equal(
-            FunctionUtils.isPromise(asyncfn),
+            PromiseUtils.isPromise(asyncfn),
             true
         )
     );
     assert(
         equal(
-            FunctionUtils.isPromise(nonAsyncFn),
+            PromiseUtils.isPromise(nonAsyncFn),
             false
         )
     );
 
     assert(
         equal(
-            FunctionUtils.isPromise(asyncfn()),
+            PromiseUtils.isPromise(asyncfn()),
             true
         )
     );
 
     assert(
         equal(
-            FunctionUtils.isPromise(nonAsyncFn()),
+            PromiseUtils.isPromise(nonAsyncFn()),
             false
         )
     );
@@ -65,27 +65,27 @@ Deno.test("isPromise without arrow function", () => {
     function nonAsyncFn() { }
     assert(
         equal(
-            FunctionUtils.isPromise(asyncfn),
+            PromiseUtils.isPromise(asyncfn),
             true
         )
     );
     assert(
         equal(
-            FunctionUtils.isPromise(nonAsyncFn),
+            PromiseUtils.isPromise(nonAsyncFn),
             false
         )
     );
 
     assert(
         equal(
-            FunctionUtils.isPromise(asyncfn()),
+            PromiseUtils.isPromise(asyncfn()),
             true
         )
     );
 
     assert(
         equal(
-            FunctionUtils.isPromise(nonAsyncFn()),
+            PromiseUtils.isPromise(nonAsyncFn()),
             false
         )
     );
@@ -95,7 +95,7 @@ Deno.test("isPromise with Promise structure", () => {
     const promise = new Promise((..._) => { });
     assert(
         equal(
-            FunctionUtils.isPromise(promise),
+            PromiseUtils.isPromise(promise),
             true
         )
     );
@@ -127,6 +127,7 @@ Deno.test("objectDifferenceKeys with classes", () => {
 
     const base = new classBase();
     const target = new classTarget();
+
     assert(
         equal(
             ObjectUtils.objectDifferenceKeys(base, target),
