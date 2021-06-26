@@ -6,11 +6,6 @@ Deno.test("Title", () => {
         StringUtils.title("Hello world!"),
         "Hello World!"
     );
-
-    assertEquals(
-        StringUtils.title(StringUtils as any),
-        null
-    );
 });
 
 Deno.test("isString", () => {
@@ -31,11 +26,6 @@ Deno.test("isString", () => {
 });
 
 Deno.test("isFullString", () => {
-    assertEquals(
-        StringUtils.isFullString(null as any),
-        false
-    );
-
     assertEquals(
         StringUtils.isFullString(""),
         false
@@ -155,5 +145,12 @@ Deno.test("snakeCaseToCamel", () => {
     assertEquals(
         StringUtils.snakeCaseToCamelCase("Ab_cd"),
         "AbCd"
+    );
+});
+
+Deno.test("reverse", () => {
+    assertEquals(
+        StringUtils.reverse("abcd"),
+        "dcba"
     );
 });
