@@ -64,7 +64,7 @@ Deno.test("isCamelCase", () => {
 
 Deno.test("isUrl", () => {
     assertEquals(
-        StringUtils.isUrl("https://www.google/com"),
+        StringUtils.isUrl("https://www.google.com"),
         true
     );
 

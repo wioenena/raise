@@ -51,7 +51,7 @@ export class StringUtils {
 
     public static isUrl(str: string) {
         if (!this.isString(str)) return false;
-        const reg = /(https?)(:\/\/)(www.)?(.+)/g;
+        const reg = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/g;
         const matched = str.match(reg);
         if (matched !== null && matched instanceof Array && Array.isArray(matched)) return true;
         return false;
