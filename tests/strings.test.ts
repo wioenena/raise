@@ -154,6 +154,6 @@ Deno.test("snakeCaseToCamel", () => {
 
     assertEquals(
         StringUtils.snakeCaseToCamelCase("Ab_cd"),
-        "Ab_cd"
+        "AbCd"
     );
 });

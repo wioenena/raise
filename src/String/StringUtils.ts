@@ -85,7 +85,7 @@ export class StringUtils {
 
     public static snakeCaseToCamelCase(str: string): string {
         if (!this.isString(str)) return "";
-        if (!this.isSnakeCase(str)) return str;
+        if ((/[A-Z]+/g).test(str) && !str.includes("_")) return str;
         return str.split(/_/g).map((words) => `${words.charAt(0).toUpperCase()}${words.slice(1)}`).join("");
     }
 }
