@@ -23,4 +23,8 @@ export class StringUtils {
 
         return true;
     }
+
+    public static title(str: string): string {
+        return str.split(/\s+/g).map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`).join(" ");
+    }
 }

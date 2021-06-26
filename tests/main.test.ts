@@ -1,5 +1,5 @@
 import { equal, assert } from "https://deno.land/std@0.99.0/testing/asserts.ts";
-import { ArrayUtils, ObjectUtils, FunctionUtils, PromiseUtils } from "../mod.ts";
+import { ArrayUtils, ObjectUtils, FunctionUtils, PromiseUtils, StringUtils } from "../mod.ts";
 import { classMethodNameLength, classNameLength, classPropLength } from "../decorators.ts";
 
 Deno.test("range(0,10)", () => {
@@ -145,4 +145,13 @@ Deno.test("class decorators", () => {
         @classMethodNameLength(null, 10)
         public myMethod() { }
     }
+});
+
+Deno.test("Title", () => {
+    assert(
+        equal(
+            StringUtils.title("Hello world!"),
+            "Hello World!"
+        )
+    );
 });
