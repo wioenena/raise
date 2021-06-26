@@ -36,4 +36,10 @@ export class StringUtils {
         if (target instanceof String) return true;
         return false;
     }
+
+    public static isFullString(str: string): boolean {
+        if (!this.isString(str)) return false;
+        if (str === "" || str === " ") return false;
+        return true;
+    }
 }
