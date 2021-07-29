@@ -1,16 +1,19 @@
+/**
+ * The substring function returns a part of a given string.
+ * @param content - Main string.
+ * @param start - start index.
+ * @param end - end index.
+ * @returns {string}
+ * @example
+ * substring("This a substring method.",7); // -> substring method.
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/XPath/Functions/substring}
+ */
 export const substring = (content: string, start: number, end?: number) => {
     "use strict";
 
     let str = "";
 
-    end = +end!;
-
-    // eslint-disable-next-line no-self-compare
-    if (end !== end)
-        end = content.length;
-
-    // eslint-disable-next-line no-multi-assign
-    end = Math.min(end, content.length);
+    end = typeof end === "undefined" ? content.length : Math.min(end, content.length);
 
     [start, end] = end < start ? [end, start] : [start, end];
 
