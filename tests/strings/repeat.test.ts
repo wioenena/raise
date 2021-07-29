@@ -8,12 +8,12 @@ Deno.test("repeat", () => {
     );
 
     assertEquals(
-        repeat("a",0),
+        repeat("a", 0),
         ""
-    )
+    );
 
     assertEquals(
-        repeat("a",1),
+        repeat("a", 1),
         "a"
-    )
+    );
 });
