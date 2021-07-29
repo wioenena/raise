@@ -7,66 +7,66 @@ Deno.test("substring", () => {
     const str = "Mozilla";
     assertEquals(
         substring(str, 1, 3),
-        "oz"
+        str.substring(1, 3)
     );
 
     assertEquals(
         substring(str, 2),
-        "zilla"
+        str.substring(2)
     );
 
     assertEquals(
         substring(str, 0, 1),
-        "M"
+        str.substring(0, 1)
     );
 
     assertEquals(
         substring(str, 1, 0),
-        "M"
+        str.substring(1, 0)
     );
 
     assertEquals(
         substring(str, 0, 6),
-        "Mozill"
+        str.substring(0, 6)
     );
 
     assertEquals(
         substring(str, 4),
-        "lla"
+        str.substring(4)
     );
 
     assertEquals(
         substring(str, 4, 7),
-        "lla"
+        str.substring(4, 7)
     );
 
     assertEquals(
         substring(str, 7, 4),
-        "lla"
+        str.substring(7, 4)
     );
 
     assertEquals(
         substring(str, 0, 7),
-        "Mozilla"
+        str.substring(0, 7)
     );
 
     assertEquals(
         substring(str, 0, 10),
-        "Mozilla"
+        str.substring(0, 10)
     );
 
     assertEquals(
         substring(str, str.length - 4),
-        "illa"
+        str.substr(str.length - 4)
     );
 
     assertEquals(
         substring(str, str.length - 5),
-        "zilla"
+        str.substring(str.length - 5)
     );
 
     assertEquals(
         substring(str, 2, 5),
-        "zil"
+        str.substring(2, 5)
     );
 });
