@@ -22,7 +22,7 @@ export const repeat = (content: string, count: number) => {
     if (count === Infinity)
         throw new Error("Repeat count must be less than infinity.");
 
-    count = Math.floor(count);
+    count |= 0;
 
     if (str.length < 1 || count === 0)
         return "";
@@ -32,7 +32,7 @@ export const repeat = (content: string, count: number) => {
 
     const maxCount = str.length * count;
 
-    count = Math.floor(getBaseLog(count, 2));
+    count = getBaseLog(count, 2) | 0;
 
     while (count--)
         str += str;
