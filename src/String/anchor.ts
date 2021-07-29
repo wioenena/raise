@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * The anchor() method creates a string beginning with an <a name="..."> start tag, then some text, and then an </a> end tag.
  * @param content - Main string.
