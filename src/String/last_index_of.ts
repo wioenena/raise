@@ -11,13 +11,7 @@ export const lastIndexOf = (content: string, search: string, endPosition?: numbe
             if (search.length === 1)
                 return endPosition;
 
-            let i = endPosition,
-                str = "";
-            while (i < content.length) {
-                str += content[i++];
-                if (str === search)
-                    return endPosition;
-            }
+            return indexOf(content, search, endPosition);
         }
 
         endPosition--;
