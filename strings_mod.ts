@@ -6,3 +6,4 @@ export * from "./src/String/trim.ts";
 export * from "./src/String/deep_trim.ts";
 export * from "./src/String/trim_start.ts";
 export * from "./src/String/trim_end.ts";
+export * from "./src/String/anchor.ts";
