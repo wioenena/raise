@@ -5,8 +5,7 @@
  * @param end - end index.
  * @returns {string}
  * @example
- * substring("This a substring method.",7); // -> substring method.
- * @see {@link https://developer.mozilla.org/en-US/docs/Web/XPath/Functions/substring}
+ * substring("This a substring method.", 7); // substring method.
  */
 export const substring = (content: string, start: number, end?: number) => {
     "use strict";
