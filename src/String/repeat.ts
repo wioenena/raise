@@ -19,7 +19,7 @@ export const repeat = (content: string, count: number) => {
     if (count < 0)
         throw new Error("Repeat count must be non-negative.");
 
-    if (count === Infinity || count === Infinity)
+    if (count === Infinity)
         throw new Error("Repeat count must be less than infinity.");
 
     count = Math.floor(count);
