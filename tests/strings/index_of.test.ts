@@ -13,4 +13,14 @@ Deno.test("indexOf", () => {
         indexOf("abcdef", "e", 2),
         "abcdef".indexOf("e", 2)
     );
+
+    assertEquals(
+        indexOf("abc def", "def"),
+        "abc def".indexOf("def")
+    );
+
+    assertEquals(
+        indexOf("abc def", "def", 2),
+        "abc def".indexOf("def", 2)
+    );
 });
