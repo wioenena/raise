@@ -21,3 +21,4 @@ export * from "./src/String/index_of.ts";
 export * from "./src/String/last_index_of.ts";
 export * from "./src/String/includes.ts";
 export * from "./src/String/italics.ts";
+export * from "./src/String/link.ts";
