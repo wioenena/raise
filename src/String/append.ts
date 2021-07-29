@@ -1,4 +1,5 @@
 import { substring } from "./substring.ts";
+
 /**
  * Appends to the beginning, end, or specified index of the string.
  * @param content - Main string.
