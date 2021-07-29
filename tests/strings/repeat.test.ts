@@ -5,17 +5,17 @@ const { repeat } = Strings;
 
 Deno.test("repeat", () => {
     assertEquals(
-        repeat("a", 5),
-        "aaaaa"
+        repeat("abc", 5),
+        "abc".repeat(5)
     );
 
     assertEquals(
-        repeat("a", 0),
-        ""
+        repeat("abc", 0),
+        "abc".repeat(0)
     );
 
     assertEquals(
-        repeat("a", 1),
-        "a"
+        repeat("abc", 1),
+        "abc".repeat(1)
     );
 });
