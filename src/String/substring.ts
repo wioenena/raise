@@ -12,7 +12,8 @@ export const substring = (content: string, start: number, end?: number) => {
 
     let str = "";
 
-    end = end === undefined || end > content.length ? content.length : end;
+    if (end === undefined || end > content.length)
+        end = content.length;
 
     [start, end] = end < start ? [end, start] : [start, end];
 
