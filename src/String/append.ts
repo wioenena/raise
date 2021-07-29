@@ -12,7 +12,8 @@ import { substring } from "./substring.ts";
 export const append = (content: string, word: string, index?: number) => {
     "use strict";
 
-    index = index === undefined || index > content.length ? content.length : index;
+    if (index === undefined || index > content.length)
+        index = content.length;
 
     const { length } = content;
     if (index >= length) return content + word;
