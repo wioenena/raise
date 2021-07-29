@@ -1,9 +1,21 @@
-export const append = (content: string, word: string, index: number) => {
+import { substring } from "./substring.ts";
+/**
+ * Appends to the beginning, end, or specified index of the string.
+ * @param content - Main string.
+ * @param word - String to append.
+ * @param index - The index to add.
+ * @returns {string}
+ * @example
+ * append("How", " are you ?"); // How are you ?
+ */
+export const append = (content: string, word: string, index?: number) => {
     "use strict";
 
-    const { length } = content;
-    if (index >= length) content += word;
-    else if (index < 1) content = word + content;
+    index = typeof index === "undefined" ? content.length : Math.min(index, content.length);
 
-    return content;
+    const { length } = content;
+    if (index >= length) return content + word;
+    if (index < 1) return word + content;
+
+    return substring(content, 0, index) + word + substring(content, index);
 };
