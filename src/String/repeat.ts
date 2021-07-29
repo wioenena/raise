@@ -34,10 +34,8 @@ export const repeat = (content: string, count: number) => {
 
     count = Math.floor(getBaseLog(count, 2));
 
-    while (count) {
+    while (count--)
         str += str;
-        count--;
-    }
 
     str += substring(str, 0, maxCount - str.length);
 
