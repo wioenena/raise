@@ -1,5 +1,7 @@
-import { substring } from "../../mod.ts";
+import { Strings } from "../../mod.ts";
 import { assertEquals } from "../../deps.ts";
+
+const { substring } = Strings;
 
 Deno.test("substring", () => {
     const str = "Mozilla";

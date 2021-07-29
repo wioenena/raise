@@ -1,5 +1,7 @@
-import { trim } from "../../mod.ts";
+import { Strings } from "../../mod.ts";
 import { assertEquals } from "../../deps.ts";
+
+const { trim } = Strings;
 
 Deno.test("trim", () => {
     assertEquals(

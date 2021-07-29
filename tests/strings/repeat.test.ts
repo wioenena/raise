@@ -1,5 +1,7 @@
-import { repeat } from "../../mod.ts";
+import { Strings } from "../../mod.ts";
 import { assertEquals } from "../../deps.ts";
+
+const { repeat } = Strings;
 
 Deno.test("repeat", () => {
     assertEquals(

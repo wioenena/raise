@@ -1,1 +1,1 @@
-export * from "./strings_mod.ts";
+export * as Strings from "./strings_mod.ts";

@@ -1,5 +1,7 @@
-import { append } from "../../mod.ts";
+import { Strings } from "../../mod.ts";
 import { assertEquals } from "../../deps.ts";
+
+const { append } = Strings;
 
 Deno.test("append", () => {
     assertEquals(

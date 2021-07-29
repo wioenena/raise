@@ -1,5 +1,7 @@
-import { clone } from "../../mod.ts";
+import { Strings } from "../../mod.ts";
 import { assertEquals } from "../../deps.ts";
+
+const { clone } = Strings;
 
 Deno.test("clone", () => {
     assertEquals(
