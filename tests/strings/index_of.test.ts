@@ -28,4 +28,14 @@ Deno.test("indexOf", () => {
         indexOf("awc", "b"),
         "awc".indexOf("b")
     );
+
+    assertEquals(
+        indexOf("I think that you need to go to the dentist so can feel more good", "to"),
+        "I think that you need to go to the dentist so can feel more good".indexOf("to")
+    );
+
+    assertEquals(
+        indexOf("I think that you need to go to the dentist so can feel more good", "to", 25),
+        "I think that you need to go to the dentist so can feel more good".indexOf("to", 25)
+    );
 });
