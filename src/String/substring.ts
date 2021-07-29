@@ -12,7 +12,7 @@ export const substring = (content: string, start: number, end?: number) => {
 
     let str = "";
 
-    end = typeof end === "undefined" ? content.length : Math.min(end, content.length);
+    end = end === undefined || end > content.length ? content.length : end;
 
     [start, end] = end < start ? [end, start] : [start, end];
 
