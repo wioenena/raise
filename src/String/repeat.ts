@@ -2,6 +2,14 @@ import { substring } from "./substring.ts";
 
 const getBaseLog = (x: number, y: number) => Math.log(x) / Math.log(y);
 
+/**
+ * The repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.
+ * @param content - Main string.
+ * @param count - An integer between 0 and +Infinity, indicating the number of times to repeat the string.
+ * @returns {string}
+ * @example
+ * repeat("abc", 3); // abcabcabc
+ */
 export const repeat = (content: string, count: number) => {
     "use strict";
 
