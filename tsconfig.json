@@ -1,8 +1,12 @@
 {
     "compilerOptions": {
         "noUnusedParameters": true,
-        "importsNotUsedAsValues": "error",
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "importsNotUsedAsValues": "error"
     },
     "include": [
         "src/**/*",

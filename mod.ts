@@ -1,5 +1,1 @@
-export * from "./src/Array/ArrayUtils.ts";
-export * from "./src/Object/ObjectUtils.ts";
-export * from "./src/Function/FunctionUtils.ts";
-export * from "./src/String/StringUtils.ts";
-export * from "./src/Promise/PromiseUtils.ts";
+export * from "./strings_mod.ts";
