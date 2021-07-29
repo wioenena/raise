@@ -6,22 +6,21 @@
  * @returns {number}
  */
 export const indexOf = (content: string, search: string, startPosition?: number) => {
-    if (startPosition === undefined || startPosition > search.length)
+    if (startPosition === undefined || startPosition > content.length)
         startPosition = 0;
 
     while (startPosition < content.length) {
-        if (search.length === 0) {
-            if (content[startPosition] === search)
+        if (content[startPosition] === search[0]) {
+            if (search.length === 0)
                 return startPosition;
-        } else {
+
             let i = startPosition,
                 str = "";
+
             while (i < content.length) {
-                str += content[i];
-                if (str === search) {
+                str += content[i++];
+                if (str === search)
                     return startPosition;
-                }
-                i++;
             }
         }
 
