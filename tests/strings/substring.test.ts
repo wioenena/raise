@@ -69,4 +69,9 @@ Deno.test("substring", () => {
         substring(str, 2, 5),
         str.substring(2, 5)
     );
+
+    assertEquals(
+        substring("abcde", 1, 1),
+        ""
+    );
 });
