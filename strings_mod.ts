@@ -3,3 +3,4 @@ export * from "./src/String/clone.ts";
 export * from "./src/String/repeat.ts";
 export * from "./src/String/substring.ts";
 export * from "./src/String/trim.ts";
+export * from "./src/String/deep_trim.ts";
