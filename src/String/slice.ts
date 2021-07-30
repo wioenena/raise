@@ -23,16 +23,16 @@ export const slice = (content: string, start?: number, end?: number) => {
         if (start * -1 > content.length)
             start = 0;
         else
-            start = content.length - (start * -1);
+            start = content.length + start;
 
     if (end < 0)
         if (end * -1 > content.length)
             end = 0;
         else
-            end = content.length - (end * -1);
+            end = content.length + end;
 
     while (start < end)
-        str += content[start++];
+        str += content[start++] ?? "";
 
     return str;
 };

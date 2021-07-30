@@ -6,4 +6,4 @@
  * @param index - The index.
  * @returns {string}
  */
-export const charAt = (content: string, index: number) => content[index];
+export const { charAt } = String.prototype;
