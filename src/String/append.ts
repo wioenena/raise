@@ -1,4 +1,4 @@
-import { substring } from "./substring.ts";
+import { slice } from "./slice.ts";
 
 /**
  * Appends to the beginning, end, or specified index of the string.
@@ -19,5 +19,5 @@ export const append = (content: string, word: string, index?: number) => {
     if (index >= length) return content + word;
     if (index < 1) return word + content;
 
-    return substring(content, 0, index) + word + substring(content, index, content.length);
+    return slice(content, 0, index) + word + slice(content, index, content.length);
 };
