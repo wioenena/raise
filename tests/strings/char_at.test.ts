@@ -11,6 +11,6 @@ Deno.test("charAt", () => {
 
     assertEquals(
         charAt("abc", 3),
-        undefined
+        ""
     );
 });
