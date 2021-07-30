@@ -13,4 +13,9 @@ Deno.test("padStart", () => {
         padStart("Hello", 50),
         "Hello".padStart(50)
     );
+
+    assertEquals(
+        padStart("5", 2, "0"),
+        "5".padStart(2, "0")
+    );
 });

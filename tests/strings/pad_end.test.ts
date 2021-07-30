@@ -13,4 +13,9 @@ Deno.test("padEnd", () => {
         padEnd("Hello", 50),
         "Hello".padEnd(50)
     );
+
+    assertEquals(
+        padEnd("Breaded Mushrooms", 25, "."),
+        "Breaded Mushrooms".padEnd(25, ".")
+    );
 });
