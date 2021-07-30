@@ -24,3 +24,4 @@ export * from "./src/String/italics.ts";
 export * from "./src/String/link.ts";
 export * from "./src/String/pad_start.ts";
 export * from "./src/String/pad_end.ts";
+export * from "./src/String/slice.ts";
