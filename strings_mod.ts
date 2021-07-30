@@ -26,3 +26,4 @@ export * from "./src/String/pad_start.ts";
 export * from "./src/String/pad_end.ts";
 export * from "./src/String/slice.ts";
 export * from "./src/String/strike.ts";
+export * from "./src/String/small.ts";
