@@ -29,3 +29,5 @@ export * from "./src/String/strike.ts";
 export * from "./src/String/small.ts";
 export * from "./src/String/sup.ts";
 export * from "./src/String/substr.ts";
+export * from "./src/String/to_upper_case.ts";
+export * from "./src/String/to_lower_case.ts";
