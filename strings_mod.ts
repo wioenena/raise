@@ -32,3 +32,4 @@ export * from './src/String/substr.ts';
 export * from './src/String/to_upper_case.ts';
 export * from './src/String/to_lower_case.ts';
 export * from './src/String/collect_string.ts';
+export * from "./src/String/collect_number.ts"
