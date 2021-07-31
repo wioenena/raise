@@ -23,7 +23,7 @@
         "no-extra-semi": "error",
         "no-invalid-regexp": "error",
         "eqeqeq": "error",
-        "use-isnan": "error",
+        "use-isnan": "off",
         "getter-return": "error",
         "valid-typeof": "error",
         "no-extra-bind": "error",
@@ -106,6 +106,7 @@
         "func-names": "off",
         "no-control-regex": "off",
         "strict": "off",
-        "one-var": "off"
+        "one-var": "off",
+        "no-self-compare": "off"
     }
 }
