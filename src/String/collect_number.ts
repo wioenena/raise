@@ -1,5 +1,4 @@
 import { collectString } from './collect_string.ts';
-import { slice } from './slice.ts';
 
 /**
  * Collects numbers starting with ', " or `
@@ -8,20 +7,26 @@ import { slice } from './slice.ts';
  * @returns {string}
  */
 export const collectNumber = (content: string, startIndex?: number) => {
-    let i = 0,
-        end;
     const strings = collectString(content, startIndex);
-    const numbers = '0123456789';
-    let char = content[i];
+    let res = '',
+        i = 0,
+        char = strings[i],
+        num = +char;
 
-    while (!numbers.includes(char)) {
-        char = strings[++i];
+    while (num !== num && char !== ' ' && char !== '') {
+        char = strings[i++];
+        num = +char;
     }
 
-    end = i--;
-    while (numbers.includes(char)) {
-        char = strings[++end];
+    while (i < content.length) {
+        char = strings[i++];
+        num = +char;
+
+        if (num !== num || char === ' ' || char === '')
+            break;
+
+        res += num;
     }
 
-    return Number(slice(strings, i, end));
+    return +res;
 };
