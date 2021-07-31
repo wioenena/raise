@@ -7,5 +7,5 @@
  * @returns {unknown}
  */
 export const applyDecorator = (base: Function, decorator: Function) => function wrapper<AType = unknown, RType = unknown>(...args: AType[]): RType {
-        return decorator(base, ...args);
-    };
+    return decorator(base, ...args);
+};
