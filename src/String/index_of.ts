@@ -6,26 +6,30 @@
  * @returns {number}
  */
 export const indexOf = (content: string, search: string, startPosition?: number) => {
-    if (startPosition === undefined || startPosition > content.length)
-        startPosition = 0;
+    let i = startPosition || 0,
+        char = content[i],
+        str = '';
 
-    while (startPosition < content.length) {
-        if (content[startPosition] === search[0]) {
-            if (search.length === 0)
-                return startPosition;
+    if (char === search)
+        return i;
 
-            let i = startPosition,
-                str = '';
+    while (i < content.length) {
+        char = content[i++];
+        str = '';
 
-            while (i < content.length) {
-                str += content[i++];
-                if (str === search)
-                    return startPosition;
-            }
+        if (char === search && search.length === 1)
+            return i;
+
+        let j = i;
+        while (j < content.length) {
+            char = content[j++];
+            str += char;
+            if (str === search)
+                return i;
         }
-
-        startPosition++;
     }
 
     return -1;
 };
+
+console.log(indexOf('abcdef', 'ef'));
