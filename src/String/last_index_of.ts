@@ -1,4 +1,4 @@
-import { indexOf } from "./index_of.ts";
+import { indexOf } from './index_of.ts';
 
 /**
  * The lastIndexOf() method returns the index within the calling String object of the last occurrence of the specified value, searching backwards from fromIndex. Returns -1 if the value is not found.
@@ -8,7 +8,7 @@ import { indexOf } from "./index_of.ts";
  * @returns {string}
  */
 export const lastIndexOf = (content: string, search: string, endPosition?: number) => {
-    "use strict";
+    'use strict';
 
     if (endPosition === undefined || endPosition > content.length)
         endPosition = content.length;

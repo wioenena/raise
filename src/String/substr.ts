@@ -1,4 +1,4 @@
-import { slice } from "./slice.ts";
+import { slice } from './slice.ts';
 
 /**
  * The substr() method returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
@@ -8,7 +8,7 @@ import { slice } from "./slice.ts";
  * @returns {string}
  */
 export const substr = (content: string, start: number, length?: number) => {
-    "use strict";
+    'use strict';
 
     if (start < 1 && length === undefined)
         return content;
@@ -20,7 +20,7 @@ export const substr = (content: string, start: number, length?: number) => {
         length = content.length;
 
     if (length < 0)
-        return "";
+        return '';
 
     if (start > -1)
         return slice(content, start, ++length);

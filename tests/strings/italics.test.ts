@@ -1,11 +1,11 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { italics } = Strings;
 
-Deno.test("italics", () => {
+Deno.test('italics', () => {
     assertEquals(
-        italics("Hello World"),
-        "Hello World".italics()
+        italics('Hello World'),
+        'Hello World'.italics()
     );
 });

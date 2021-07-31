@@ -1,4 +1,4 @@
-import { append } from "./append.ts";
+import { append } from './append.ts';
 
 /**
  * The padStart() method pads the current string with another string (multiple times, if needed) until the resulting string reaches the given length. The padding is applied from the start of the current string.
@@ -8,12 +8,12 @@ import { append } from "./append.ts";
  * @returns {string}
  */
 export const padStart = (content: string, maxLength: number, fillStr?: string) => {
-    "use strict";
+    'use strict';
 
-    let str = "";
+    let str = '';
 
     for (let i = 0; i < (maxLength - content.length); i++)
-        str += append("", fillStr || " ", 0);
+        str += append('', fillStr || ' ', 0);
 
     return str + content;
 };

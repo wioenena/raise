@@ -1,16 +1,16 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { trimStart } = Strings;
 
-Deno.test("trimStart", () => {
+Deno.test('trimStart', () => {
     assertEquals(
-        trimStart("   abc"),
-        "abc"
+        trimStart('   abc'),
+        'abc'
     );
 
     assertEquals(
-        trimStart("   ab   c"),
-        "ab   c"
+        trimStart('   ab   c'),
+        'ab   c'
     );
 });

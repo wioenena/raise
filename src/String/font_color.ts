@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
-import { tag } from "./tag.ts";
-import { append } from "./append.ts";
+import { tag } from './tag.ts';
+import { append } from './append.ts';
 
 /**
  * The fontcolor() method creates a <font> HTML element that causes a string to be displayed in the specified font color.
@@ -9,4 +9,4 @@ import { append } from "./append.ts";
  * @param color - Color
  * @returns {string}
  */
-export const fontColor = (content: string, color: string) => append(tag("font", content), ` color="${color}"`, 5);
+export const fontColor = (content: string, color: string) => append(tag('font', content), ` color="${color}"`, 5);

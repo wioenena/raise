@@ -1,4 +1,4 @@
-import { slice } from "./slice.ts";
+import { slice } from './slice.ts';
 
 /**
  * The substring function returns a part of a given string.
@@ -10,7 +10,7 @@ import { slice } from "./slice.ts";
  * substring("This a substring method.", 7); // substring method.
  */
 export const substring = (content: string, start?: number, end?: number) => {
-    "use strict";
+    'use strict';
 
     if (start === undefined && end === undefined)
         return content;

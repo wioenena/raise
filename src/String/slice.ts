@@ -6,12 +6,12 @@
  * @returns {string}
  */
 export const slice = (content: string, start?: number, end?: number) => {
-    "use strict";
+    'use strict';
 
     if (start === undefined && end === undefined)
         return content;
 
-    let str = "";
+    let str = '';
 
     if (start === undefined)
         start = 0;
@@ -32,7 +32,7 @@ export const slice = (content: string, start?: number, end?: number) => {
             end = content.length + end;
 
     while (start < end)
-        str += content[start++] ?? "";
+        str += content[start++] ?? '';
 
     return str;
 };

@@ -1,4 +1,4 @@
-import { substring } from "./substring.ts";
+import { substring } from './substring.ts';
 
 const getBaseLog = (x: number, y: number) => Math.log(x) / Math.log(y);
 
@@ -11,24 +11,24 @@ const getBaseLog = (x: number, y: number) => Math.log(x) / Math.log(y);
  * repeat("abc", 3); // abcabcabc
  */
 export const repeat = (content: string, count: number) => {
-    "use strict";
+    'use strict';
 
     // eslint-disable-next-line prefer-template
-    let str = "" + content;
+    let str = '' + content;
 
     if (count < 0)
-        throw new Error("Repeat count must be non-negative.");
+        throw new Error('Repeat count must be non-negative.');
 
     if (count === Infinity)
-        throw new Error("Repeat count must be less than infinity.");
+        throw new Error('Repeat count must be less than infinity.');
 
     count |= 0;
 
     if (str.length < 1 || count === 0)
-        return "";
+        return '';
 
     if (str.length * count >= (2 ** 28))
-        throw new Error("The number of repetitions should not exceed the maximum number of strings.");
+        throw new Error('The number of repetitions should not exceed the maximum number of strings.');
 
     const maxCount = str.length * count;
 

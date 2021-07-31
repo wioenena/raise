@@ -1,11 +1,11 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { blink } = Strings;
 
-Deno.test("blink", () => {
+Deno.test('blink', () => {
     assertEquals(
-        blink("Hello World"),
-        "Hello World".blink()
+        blink('Hello World'),
+        'Hello World'.blink()
     );
 });

@@ -1,21 +1,21 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { clone } = Strings;
 
-Deno.test("clone", () => {
+Deno.test('clone', () => {
     assertEquals(
-        clone("abc"),
-        "abc"
+        clone('abc'),
+        'abc'
     );
 
     assertEquals(
-        clone(""),
-        ""
+        clone(''),
+        ''
     );
 
     assertEquals(
-        clone(" "),
-        " "
+        clone(' '),
+        ' '
     );
 });

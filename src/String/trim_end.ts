@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * Deletes spaces at the end of the string.
@@ -7,4 +7,4 @@
  * @example
  * trimEnd("abc    "); // abc
  */
-export const trimEnd = (content: string) => content.replace(/\s+$/, "");
+export const trimEnd = (content: string) => content.replace(/\s+$/, '');

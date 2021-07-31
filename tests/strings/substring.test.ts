@@ -1,10 +1,10 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { substring } = Strings;
 
-Deno.test("substring", () => {
-    const str = "1234";
+Deno.test('substring', () => {
+    const str = '1234';
 
     assertEquals(
         substring(str, 2, 3),

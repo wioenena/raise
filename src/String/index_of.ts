@@ -15,7 +15,7 @@ export const indexOf = (content: string, search: string, startPosition?: number)
                 return startPosition;
 
             let i = startPosition,
-                str = "";
+                str = '';
 
             while (i < content.length) {
                 str += content[i++];

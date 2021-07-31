@@ -80,7 +80,7 @@
         "import/no-unresolved": "off",
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "no-restricted-syntax": "off",
         "no-param-reassign": "off",

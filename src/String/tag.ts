@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * Returns the string with the specified tag.

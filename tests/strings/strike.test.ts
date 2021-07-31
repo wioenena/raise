@@ -1,11 +1,11 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { strike } = Strings;
 
-Deno.test("strike", () => {
+Deno.test('strike', () => {
     assertEquals(
-        strike("Hello"),
-        "Hello".strike()
+        strike('Hello'),
+        'Hello'.strike()
     );
 });

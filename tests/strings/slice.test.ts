@@ -1,10 +1,10 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { slice } = Strings;
 
-Deno.test("slice", () => {
-    const str = "1234";
+Deno.test('slice', () => {
+    const str = '1234';
 
     assertEquals(
         slice(str, 2, 3),

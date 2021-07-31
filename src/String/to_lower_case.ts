@@ -1,4 +1,4 @@
-import { slice } from "./slice.ts";
+import { slice } from './slice.ts';
 
 /**
  * Same as "String.prototype.toLowerCase", only start and end indexes can be set.
@@ -8,7 +8,7 @@ import { slice } from "./slice.ts";
  * @returns {string}
  */
 export const toLowerCase = (content: string, start?: number, end?: number) => {
-    "use strict";
+    'use strict';
 
     if (start === undefined && end === undefined)
         return content.toLowerCase();

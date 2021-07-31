@@ -1,21 +1,21 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { toUpperCase } = Strings;
 
-Deno.test("toUpperCase", () => {
+Deno.test('toUpperCase', () => {
     assertEquals(
-        toUpperCase("abcdef", 2),
-        "abCDEF"
+        toUpperCase('abcdef', 2),
+        'abCDEF'
     );
 
     assertEquals(
-        toUpperCase("abcdef", 2, 4),
-        "abCDEf"
+        toUpperCase('abcdef', 2, 4),
+        'abCDEf'
     );
 
     assertEquals(
-        toUpperCase("abcdef", 0, 4),
-        "ABCDEf"
+        toUpperCase('abcdef', 0, 4),
+        'ABCDEf'
     );
 });

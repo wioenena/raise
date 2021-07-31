@@ -1,21 +1,21 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { padEnd } = Strings;
 
-Deno.test("padEnd", () => {
+Deno.test('padEnd', () => {
     assertEquals(
-        padEnd("Hello", 10, "o"),
-        "Hello".padEnd(10, "o")
+        padEnd('Hello', 10, 'o'),
+        'Hello'.padEnd(10, 'o')
     );
 
     assertEquals(
-        padEnd("Hello", 50),
-        "Hello".padEnd(50)
+        padEnd('Hello', 50),
+        'Hello'.padEnd(50)
     );
 
     assertEquals(
-        padEnd("Breaded Mushrooms", 25, "."),
-        "Breaded Mushrooms".padEnd(25, ".")
+        padEnd('Breaded Mushrooms', 25, '.'),
+        'Breaded Mushrooms'.padEnd(25, '.')
     );
 });

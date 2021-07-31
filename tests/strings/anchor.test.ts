@@ -1,13 +1,13 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { anchor } = Strings;
 
-Deno.test("anchor", () => {
-    let myString = "Table of Contents";
+Deno.test('anchor', () => {
+    let myString = 'Table of Contents';
 
     assertEquals(
-        anchor(myString, "contents_anchor"),
-        myString.anchor("contents_anchor")
+        anchor(myString, 'contents_anchor'),
+        myString.anchor('contents_anchor')
     );
 });

@@ -1,11 +1,11 @@
-import { Strings } from "../../mod.ts";
-import { assertEquals } from "../../deps.ts";
+import { Strings } from '../../mod.ts';
+import { assertEquals } from '../../deps.ts';
 
 const { small } = Strings;
 
-Deno.test("small", () => {
+Deno.test('small', () => {
     assertEquals(
-        small("Hello"),
-        "Hello".small()
+        small('Hello'),
+        'Hello'.small()
     );
 });

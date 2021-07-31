@@ -1,4 +1,4 @@
-import { indexOf } from "./index_of.ts";
+import { indexOf } from './index_of.ts';
 
 /**
  * The includes() method performs a case-sensitive search to determine whether one string may be found within another string, returning true or false as appropriate.
@@ -8,7 +8,7 @@ import { indexOf } from "./index_of.ts";
  * @returns {boolean}
  */
 export const includes = (content: string, search: string, startPosition?: number) => {
-    "use strict";
+    'use strict';
 
     if (startPosition === undefined || startPosition > content.length)
         startPosition = 0;
