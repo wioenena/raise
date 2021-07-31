@@ -31,5 +31,3 @@ export const indexOf = (content: string, search: string, startPosition?: number)
 
     return -1;
 };
-
-console.log(indexOf('abcdef', 'ef'));
