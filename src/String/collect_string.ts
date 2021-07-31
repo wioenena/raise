@@ -20,6 +20,8 @@ export const collectString = (content: string, startIndex?: number) => {
         char = content[++i];
         if (char === '\'' || char === '"' || char === '`')
             break;
+        else if (i >= content.length)
+            throw new SyntaxError('Invalid or unexpected token');
 
         str += char;
     }
