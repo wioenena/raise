@@ -6,8 +6,6 @@
  * @param decorator - Decorator function.
  * @returns {unknown}
  */
-export const applyDecorator = (base: Function, decorator: Function) => {
-    return function wrapper<AType = unknown, RType = unknown>(...args: AType[]): RType {
+export const applyDecorator = (base: Function, decorator: Function) => function wrapper<AType = unknown, RType = unknown>(...args: AType[]): RType {
         return decorator(base, ...args);
     };
-};
