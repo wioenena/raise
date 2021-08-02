@@ -1,3 +1,8 @@
-export default function isSymbol(o: unknown) {
-    return typeof o === 'symbol';
+/**
+ * Returns whether the target is "Symbol".
+ * @param target - Targer
+ * @returns {boolean}
+ */
+export default function isSymbol(target: unknown) {
+    return typeof target === 'symbol';
 }
