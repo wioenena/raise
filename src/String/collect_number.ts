@@ -1,3 +1,5 @@
+'use strict';
+
 import collectString from './collect_string.ts';
 
 /**

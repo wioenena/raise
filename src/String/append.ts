@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Appends to the beginning, end, or specified index of the string.
  * @param content - Main string.
@@ -8,8 +10,6 @@
  * append("How", " are you ?"); // How are you ?
  */
 export default function append(content: string, word: string, index?: number) {
-    'use strict';
-
     if (index === undefined || index > content.length)
         index = content.length;
 

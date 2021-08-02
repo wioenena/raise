@@ -1,3 +1,7 @@
+'use strict';
+
+import checkIsString from './check_is_string.ts';
+
 const findQuotes = (content: string, start = 0) => {
     let char = content[start];
 
@@ -16,6 +20,8 @@ const findQuotes = (content: string, start = 0) => {
  * @returns {string}
  */
 export default function collectString(content: string, startIndex?: number) {
+    checkIsString(content);
+
     let res = '',
         i = findQuotes(content, startIndex),
         end = findQuotes(content, i + 1);
