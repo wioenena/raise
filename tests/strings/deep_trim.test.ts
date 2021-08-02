@@ -18,4 +18,9 @@ Deno.test('deepTrim', () => {
         deepTrim('   a   b   c   '),
         'a b c'
     );
+
+    assertEquals(
+        deepTrim('           '),
+        ''
+    );
 });

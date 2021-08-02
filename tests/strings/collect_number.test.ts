@@ -1,7 +1,7 @@
 import { Strings } from '../../mod.ts';
 import { assertEquals } from '../../deps.ts';
 
-const { collectNumber, indexOf } = Strings;
+const { collectNumber } = Strings;
 
 Deno.test('collectNumber', () => {
     assertEquals(
@@ -16,7 +16,7 @@ Deno.test('collectNumber', () => {
 
     const str = '"12345" "4102019"';
     assertEquals(
-        collectNumber(str, indexOf(str, '4102019') - 1),
+        collectNumber(str, str.indexOf('4102019') - 1),
         4102019
     );
 });

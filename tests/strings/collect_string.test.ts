@@ -1,7 +1,7 @@
 import { Strings } from '../../mod.ts';
 import { assertEquals } from '../../deps.ts';
 
-const { collectString, indexOf } = Strings;
+const { collectString } = Strings;
 
 Deno.test('collectString', () => {
     assertEquals(
@@ -16,7 +16,7 @@ Deno.test('collectString', () => {
 
     const hw = '"Hello" "World"';
     assertEquals(
-        collectString(hw, indexOf(hw, 'W') - 1),
+        collectString(hw, hw.indexOf('W') - 1),
         'World'
     );
 
