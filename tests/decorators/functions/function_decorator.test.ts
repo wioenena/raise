@@ -2,7 +2,6 @@ import { Decorators, Strings } from '../../../mod.ts';
 import { assertEquals } from '../../../deps.ts';
 
 const { Functions: { applyDecorator } } = Decorators;
-const { repeat: _repeat } = Strings;
 
 function repeat(_: Function, size: number, length: number) {
     let executedSize = 0;
@@ -15,7 +14,7 @@ function repeat(_: Function, size: number, length: number) {
 }
 
 function printStar(length: number) {
-    console.log(_repeat('*', length));
+    console.log('*'.repeat(length));
 }
 
 const decorated = applyDecorator(printStar, repeat);
