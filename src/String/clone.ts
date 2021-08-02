@@ -7,6 +7,6 @@
  * @example
  * clone("Hello"); // Hello
  */
-export function clone(content: string) {
+export default function clone(content: string) {
     return `${content}`;
 }

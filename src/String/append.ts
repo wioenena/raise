@@ -7,7 +7,7 @@
  * @example
  * append("How", " are you ?"); // How are you ?
  */
-export function append(content: string, word: string, index?: number) {
+export default function append(content: string, word: string, index?: number) {
     'use strict';
 
     if (index === undefined || index > content.length)

@@ -1,4 +1,4 @@
-import { collectString } from './collect_string.ts';
+import collectString from './collect_string.ts';
 
 /**
  * Collects numbers starting with ', " or `
@@ -6,7 +6,7 @@ import { collectString } from './collect_string.ts';
  * @param startIndex - Start index.
  * @returns {string}
  */
-export function collectNumber(content: string, startIndex?: number) {
+export default function collectNumber(content: string, startIndex?: number) {
     const strings = collectString(content, startIndex);
     let res = '',
         i = 0,
