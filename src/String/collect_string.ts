@@ -15,7 +15,7 @@ const findQuotes = (content: string, start = 0) => {
  * @param startIndex - Starting index.
  * @returns {string}
  */
-export const collectString = (content: string, startIndex?: number) => {
+export function collectString(content: string, startIndex?: number) {
     let res = '',
         i = findQuotes(content, startIndex),
         end = findQuotes(content, i + 1);
@@ -28,4 +28,4 @@ export const collectString = (content: string, startIndex?: number) => {
     }
 
     return res;
-};
+}

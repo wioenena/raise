@@ -1,6 +1,6 @@
 'use strict';
 
-import { trim } from './trim.ts';
+import { isString } from './is_string.ts';
 
 /**
  * Deletes all redundant spaces in the string.
@@ -9,4 +9,10 @@ import { trim } from './trim.ts';
  * @example
  * deepTrim("      Hello       friend.     "); // Hello friend.
  */
-export const deepTrim = (content: string) => trim(content).replace(/\s{1,}/g, ' ');
+export function deepTrim(content: string) {
+    if (!isString(content))
+        throw new TypeError(`${content}'s type is not string. type of ${content} = ${typeof content}`);
+
+    return content.replace(/(^\s+)|(\s+$)/g, '')
+        .replace(/\s{1,}/g, ' ');
+}

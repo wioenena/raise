@@ -6,7 +6,7 @@ import { collectString } from './collect_string.ts';
  * @param startIndex - Start index.
  * @returns {string}
  */
-export const collectNumber = (content: string, startIndex?: number) => {
+export function collectNumber(content: string, startIndex?: number) {
     const strings = collectString(content, startIndex);
     let res = '',
         i = 0,
@@ -32,4 +32,4 @@ export const collectNumber = (content: string, startIndex?: number) => {
     }
 
     return +res;
-};
+}

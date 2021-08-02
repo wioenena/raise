@@ -1,5 +1,3 @@
-import { slice } from './slice.ts';
-
 /**
  * Appends to the beginning, end, or specified index of the string.
  * @param content - Main string.
@@ -9,7 +7,7 @@ import { slice } from './slice.ts';
  * @example
  * append("How", " are you ?"); // How are you ?
  */
-export const append = (content: string, word: string, index?: number) => {
+export function append(content: string, word: string, index?: number) {
     'use strict';
 
     if (index === undefined || index > content.length)
@@ -19,5 +17,5 @@ export const append = (content: string, word: string, index?: number) => {
     if (index >= length) return content + word;
     if (index < 1) return word + content;
 
-    return slice(content, 0, index) + word + slice(content, index, content.length);
-};
+    return content.slice(0, index) + word + content.slice(index, content.length);
+}

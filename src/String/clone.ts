@@ -7,4 +7,6 @@
  * @example
  * clone("Hello"); // Hello
  */
-export const clone = (content: string) => `${content}`;
+export function clone(content: string) {
+    return `${content}`;
+}
