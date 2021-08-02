@@ -14,6 +14,9 @@ export const collectNumber = (content: string, startIndex?: number) => {
         num = +char;
 
     while (num !== num && char !== ' ' && char !== '') {
+        if (i > content.length)
+            break;
+
         char = strings[i++];
         num = +char;
     }
