@@ -107,6 +107,7 @@
         "no-control-regex": "off",
         "strict": "off",
         "one-var": "off",
-        "no-self-compare": "off"
+        "no-self-compare": "off",
+        "import/no-extraneous-dependencies": "off"
     }
 }
