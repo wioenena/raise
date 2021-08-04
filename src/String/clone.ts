@@ -1,16 +1,12 @@
 'use strict';
 
-import checkIsString from './check_is_string.ts';
-
 /**
  * Copies the string.
- * @param content - Main string.
+ * @param content - The string to be copied.
  * @returns {string}
  * @example
  * clone("Hello"); // Hello
  */
-export default function clone(content: string) {
-    checkIsString(content);
-
+export default function clone(content: string): string {
     return `${content}`;
 }

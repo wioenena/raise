@@ -5,6 +5,6 @@
  * @param target - Target.
  * @returns {boolean}
  */
-export default function isString(target: unknown) {
+export default function isString(target: unknown): boolean {
     return typeof target === 'string';
 }

@@ -1,19 +1,15 @@
 'use strict';
 
-import checkIsString from './check_is_string.ts';
-
 /**
  * Appends to the beginning, end, or specified index of the string.
- * @param content - Main string.
- * @param word - String to append.
- * @param index - The index to add.
+ * @param content - The string to append.
+ * @param word - String to add.
+ * @param index - Target index.
  * @returns {string}
  * @example
  * append("How", " are you ?"); // How are you ?
  */
-export default function append(content: string, word: string, index?: number) {
-    checkIsString(content);
-
+export default function append(content: string, word: string, index?: number): string {
     if (index === undefined || index > content.length)
         index = content.length;
 
