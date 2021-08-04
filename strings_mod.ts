@@ -6,3 +6,5 @@ export { default as collectNumber } from './src/String/collect_number.ts';
 export { default as isString } from './src/String/is_string.ts';
 export { default as toString } from './src/String/to_string.ts';
 export { default as checkIsString } from './src/String/check_is_string.ts';
+export { default as endsWith } from "./src/String/ends_with.ts";
+

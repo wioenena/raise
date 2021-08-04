@@ -1,4 +1,4 @@
-node_modules
+node_modules/
+.vim/
 package.json
 .npmrc
-node
