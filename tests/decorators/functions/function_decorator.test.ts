@@ -1,9 +1,9 @@
-import { Decorators, Strings } from '../../../mod.ts';
+import { Decorators } from '../../../mod.ts';
 import { assertEquals } from '../../../deps.ts';
 
 const { Functions: { applyDecorator } } = Decorators;
 
-function repeat(_: Function, size: number, length: number) {
+function repeat(_: object, size: number, length: number) {
     let executedSize = 0;
     for (let i = 0; i < size; i++) {
         _(length);

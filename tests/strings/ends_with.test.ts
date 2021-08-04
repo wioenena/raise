@@ -3,15 +3,14 @@ import { assertEquals } from '../../deps.ts';
 
 const { endsWith } = Strings;
 
-Deno.test("endsWith", () => {
+Deno.test('endsWith', () => {
     assertEquals(
-        endsWith("abc", "c"),
-        "abc".endsWith("c")
+        endsWith('abc', 'c'),
+        'abc'.endsWith('c')
     );
 
     assertEquals(
-        endsWith("abc","b", 2),
-        "abc".endsWith("b", 2)
-    )
-})
-
+        endsWith('abc', 'b', 2),
+        'abc'.endsWith('b', 2)
+    );
+});

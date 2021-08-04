@@ -3,10 +3,9 @@ import { assertEquals } from '../../deps.ts';
 
 const { toLower } = Strings;
 
-
-Deno.test("toLower", () => {
+Deno.test('toLower', () => {
     assertEquals(
-        toLower("A-B-C"),
-        "A-B-C".toLowerCase()
+        toLower('A-B-C'),
+        'A-B-C'.toLowerCase()
     );
 });

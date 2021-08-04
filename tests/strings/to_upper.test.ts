@@ -3,10 +3,9 @@ import { assertEquals } from '../../deps.ts';
 
 const { toUpper } = Strings;
 
-
-Deno.test("toUpper", () => {
+Deno.test('toUpper', () => {
     assertEquals(
-        toUpper("a-b-c"),
-        "a-b-c".toUpperCase()
+        toUpper('a-b-c'),
+        'a-b-c'.toUpperCase()
     );
 });
